@@ -1,0 +1,87 @@
+@import "../../scss/variables.scss";
+
+.container {
+  background-color: $secondary-color;
+  height: 100%;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  transform: translateX(-160%);
+  transition: transform 1s ease-out;
+  z-index: 2000;
+  box-shadow: 0px 0px 4px 5px #00000040;
+}
+.containerOpen {
+  transform: translateX(0%);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0.5rem;
+  align-items: center;
+  height: 10vh;
+  color: $font-color;
+  font-weight: $title-weight;
+  .icon {
+    background-color: $primary-color;
+    border-radius: 0.5rem;
+    font-size: $icon-size;
+    padding: 0.2rem;
+  }
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+}
+.body,
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.2rem;
+  width: 100%;
+  height: 72vh;
+  overflow: auto;
+}
+.user {
+  flex-direction: row;
+  gap: 1.2rem;
+  height: 10vh;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  padding-left: 0.5rem;
+}
+.avatar,
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $font-name-color;
+  font-size: $title-size;
+}
+.avatar {
+  background-color: $primary-color;
+  width: 4rem;
+  height: 4rem;
+}
+.iconUser {
+  color: $font-color;
+  font-size: $icon-size;
+}
+.closeButton {
+  position: fixed;
+  padding: 1rem;
+  right: 0;
+  margin-top: 0.9rem;
+  margin-right: -4.4rem;
+  background-color: $secondary-color;
+  color: $font-color;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 2px 2px #00000040;
+}

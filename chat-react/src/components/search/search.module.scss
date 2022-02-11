@@ -1,0 +1,23 @@
+@import "../../scss/variables.scss";
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: $input-color;
+  border-radius: 0.7rem;
+  width: 90%;
+  height: 75%;
+  color: $font-name-color;
+  font-size: $time-size;
+  font-weight: $font-weight;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: $font-name-color;
+}

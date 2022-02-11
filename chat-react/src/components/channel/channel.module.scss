@@ -1,0 +1,21 @@
+@import "../../scss/variables.scss";
+
+.container,
+.avatar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  width: 90%;
+  height: 8vh;
+  color: $font-color;
+  font-weight: $title-weight;
+  font-size: $font-size;
+}
+.avatar {
+  justify-content: center;
+  background-color: $primary-color;
+  border-radius: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+}

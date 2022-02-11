@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "FRONT END",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius mollis lacus, a viverra dui. Quisque non accumsan erat, tincidunt sodales augue. Suspendisse tempor viverra tellus sed cursus. Curabitur porttitor."
+  },
+  {
+    "id": 2,
+    "name": "FRONT END",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius mollis lacus, a viverra dui. Quisque non accumsan erat, tincidunt sodales augue. Suspendisse tempor viverra tellus sed cursus. Curabitur porttitor."
+  },
+  {
+    "id": 3,
+    "name": "FRONT END",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius mollis lacus, a viverra dui. Quisque non accumsan erat, tincidunt sodales augue. Suspendisse tempor viverra tellus sed cursus. Curabitur porttitor."
+  },
+  {
+    "id": 4,
+    "name": "FRONT END",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius mollis lacus, a viverra dui. Quisque non accumsan erat, tincidunt sodales augue. Suspendisse tempor viverra tellus sed cursus. Curabitur porttitor."
+  },
+  {
+    "id": 5,
+    "name": "FRONT END",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius mollis lacus, a viverra dui. Quisque non accumsan erat, tincidunt sodales augue. Suspendisse tempor viverra tellus sed cursus. Curabitur porttitor."
+  }
+]
