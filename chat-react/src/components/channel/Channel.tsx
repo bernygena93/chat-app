@@ -4,11 +4,12 @@ import IChannel from "./types.d";
 
 type ChannelProps = {
   channel: IChannel;
+  onclick: Function;
 };
 
-function Channel({ channel }: ChannelProps) {
+function Channel({ channel, onclick }: ChannelProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} aria-hidden onClick={() => onclick()}>
       <div className={styles.avatar}>CH</div>
       <div className={styles.name}>{channel.name}</div>
     </div>

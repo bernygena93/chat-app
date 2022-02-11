@@ -39,7 +39,7 @@
   height: 8vh;
 }
 .body,
-.user {
+.bodyMembers {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -49,8 +49,13 @@
   height: 72vh;
   overflow: auto;
 }
+.bodyMembers {
+  height: 45vh;
+}
 .user {
-  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1.2rem;
   height: 10vh;
   font-size: $font-size;
@@ -60,12 +65,20 @@
 .avatar,
 .name {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 80%;
   align-items: center;
   color: $font-name-color;
   font-size: $title-size;
 }
+.nameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .avatar {
+  justify-content: center;
   background-color: $primary-color;
   width: 4rem;
   height: 4rem;
@@ -84,4 +97,14 @@
   color: $font-color;
   border-radius: 0.5rem;
   box-shadow: 2px 2px 2px 2px #00000040;
+}
+.description {
+  display: flex;
+  padding: 0rem 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: justify;
+  height: 17vh;
+  color: $font-color;
+  overflow: auto;
 }
