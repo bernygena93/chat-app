@@ -1,16 +1,12 @@
 @import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
 
 .container,
 .avatar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.5rem;
+  @include display-flex(flex-start, center, 1.5rem);
+  @include styles-font();
   width: 80%;
   height: 8vh;
-  color: $font-color;
-  font-weight: $title-weight;
-  font-size: $font-size;
 }
 .avatar {
   justify-content: center;

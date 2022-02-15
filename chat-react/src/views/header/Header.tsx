@@ -9,7 +9,9 @@ type HeaderProps = {
 function Header({ drawerToggle }: HeaderProps) {
   return (
     <div className={styles.container}>
-      <MenuIcon className={styles.title} onClick={() => drawerToggle()} />
+      <div className={styles.iconContainer}>
+        <MenuIcon className={styles.title} onClick={() => drawerToggle()} />
+      </div>
       <h1 className={styles.title}>NOMBRE DEL CANAL</h1>
     </div>
   );

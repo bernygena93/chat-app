@@ -1,18 +1,14 @@
 @import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
 
 .container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.5rem;
+  @include display-flex(flex-start, center, 0.5rem);
+  @include styles-font($time-size, $font-weight, $font-name-color);
   padding-left: 0.5rem;
   background-color: $input-color;
   border-radius: 0.7rem;
   width: 90%;
   height: 75%;
-  color: $font-name-color;
-  font-size: $time-size;
-  font-weight: $font-weight;
 }
 
 .input {

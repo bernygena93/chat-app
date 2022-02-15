@@ -13,10 +13,10 @@ function App() {
   };
 
   return (
-    <>
+    <div className="app">
       <Drawer drawerToggle={handlerDrawer} drawerOpen={drawerOpen} />
       <Header drawerToggle={handlerDrawer} />
-    </>
+    </div>
   );
 }
 

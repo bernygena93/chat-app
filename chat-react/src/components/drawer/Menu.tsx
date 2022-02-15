@@ -13,7 +13,7 @@ function Menu({ handlerSelected }: MenuProps) {
   return (
     <>
       <div className={styles.header}>
-        <h2>Channels</h2>
+        <h2 className={styles.title}>Channels</h2>
         <AddIcon className={styles.icon} />
       </div>
       <div className={styles.search}>
