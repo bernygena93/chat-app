@@ -1,0 +1,13 @@
+@import "./scss/variables.scss";
+
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background-color: $primary-color;
+}
+@media screen and (min-width: 769px) {
+  .app {
+    display: flex;
+  }
+}

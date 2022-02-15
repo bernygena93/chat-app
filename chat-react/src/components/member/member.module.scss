@@ -1,0 +1,17 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.container,
+.avatar {
+  @include display-flex(flex-start, center, 1.5rem);
+  @include styles-font();
+  width: 80%;
+  height: 8vh;
+}
+.avatar {
+  justify-content: center;
+  background-color: $primary-color;
+  border-radius: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+}

@@ -1,0 +1,19 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.container {
+  @include display-flex(flex-start, center, 0.5rem);
+  @include styles-font($time-size, $font-weight, $font-name-color);
+  padding-left: 0.5rem;
+  background-color: $input-color;
+  border-radius: 0.7rem;
+  width: 90%;
+  height: 75%;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: $font-name-color;
+}
