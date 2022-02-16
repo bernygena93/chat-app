@@ -12,8 +12,5 @@
 }
 
 .input {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: $font-name-color;
+  @include input;
 }

@@ -3,10 +3,13 @@
 import { useState } from "react";
 import "./App.scss";
 import Drawer from "./components/drawer/Drawer";
+import InputMessage from "./components/input/InputMessage";
+import Modal from "./components/modal/Modal";
 import Header from "./views/header/Header";
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
+  const [viewModal, setViewModal] = useState<boolean>(false);
 
   const handlerDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -14,8 +17,14 @@ function App() {
 
   return (
     <div className="app">
-      <Drawer drawerToggle={handlerDrawer} drawerOpen={drawerOpen} />
+      {viewModal && <Modal setView={setViewModal} />}
+      <Drawer
+        drawerToggle={handlerDrawer}
+        drawerOpen={drawerOpen}
+        setView={setViewModal}
+      />
       <Header drawerToggle={handlerDrawer} />
+      <InputMessage />
     </div>
   );
 }

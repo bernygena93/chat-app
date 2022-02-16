@@ -8,9 +8,10 @@ import Menu from "./Menu";
 type DrawerProps = {
   drawerOpen: boolean;
   drawerToggle: Function;
+  setView: Function;
 };
 
-function Drawer({ drawerOpen, drawerToggle }: DrawerProps) {
+function Drawer({ drawerOpen, drawerToggle, setView }: DrawerProps) {
   const activeDrawer = drawerOpen && styles.containerOpen;
   const [channelSelected, setChannelSelected] = useState(false);
 
@@ -26,7 +27,11 @@ function Drawer({ drawerOpen, drawerToggle }: DrawerProps) {
       {channelSelected ? (
         <ChannelMenu handlerSelected={handlerChannelSelected} />
       ) : (
-        <Menu handlerSelected={handlerChannelSelected} />
+        <Menu
+          handlerSelected={handlerChannelSelected}
+          setView={setView}
+          drawerToggle={drawerToggle}
+        />
       )}
       <User />
     </div>

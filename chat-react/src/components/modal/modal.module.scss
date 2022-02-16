@@ -1,0 +1,33 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.container {
+  @include background-modal;
+}
+.modal {
+  @include modal;
+}
+.title {
+  width: 90%;
+  @include display-flex(flex-start);
+  @include styles-font;
+}
+.info {
+  @include display-flex(center, center, 1rem);
+  flex-direction: column;
+  width: 90%;
+}
+.input {
+  @include input(97%);
+  padding: 0.5rem 0.5rem;
+  resize: none;
+  border-radius: 0.3rem;
+}
+.buttonContainer {
+  width: 90%;
+  @include display-flex(flex-end);
+}
+.button {
+  @include button;
+  padding: 0.5rem 1rem;
+}

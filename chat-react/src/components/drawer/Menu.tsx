@@ -7,14 +7,23 @@ import Channel from "../channel/Channel";
 
 type MenuProps = {
   handlerSelected: Function;
+  setView: Function;
+  drawerToggle: Function;
 };
 
-function Menu({ handlerSelected }: MenuProps) {
+function Menu({ handlerSelected, setView, drawerToggle }: MenuProps) {
+  const handleViewModalandDrawer = () => {
+    drawerToggle();
+    setView(true);
+  };
   return (
     <>
       <div className={styles.header}>
         <h2 className={styles.title}>Channels</h2>
-        <AddIcon className={styles.icon} />
+        <AddIcon
+          className={styles.icon}
+          onClick={() => handleViewModalandDrawer()}
+        />
       </div>
       <div className={styles.search}>
         <Search />

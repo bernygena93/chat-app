@@ -16,3 +16,46 @@
   font-weight: $weight;
   color: $color;
 }
+@mixin input($width: 85%) {
+  background-color: $input-color;
+  border: none;
+  outline: none;
+  width: $width;
+  color: $font-color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: $noto-sans;
+  &::#{placeholder} {
+    padding-left: 0.5rem;
+    color: $font-name-color;
+    font-weight: $placeholder-weight;
+  }
+}
+
+@mixin background-modal {
+  @include display-flex;
+  position: absolute;
+  z-index: 3000;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 10, 0.4);
+}
+
+@mixin modal($width: 30rem, $height: 20rem) {
+  @include display-flex(center, center, 1rem);
+  flex-direction: column;
+  z-index: 4000;
+  width: $width;
+  height: $height;
+  background-color: $secondary-color;
+  border-radius: 1rem;
+}
+@mixin button {
+  @include display-flex;
+  border: none;
+  background-color: $button-color;
+  color: $font-color;
+  border-radius: 0.4rem;
+}
