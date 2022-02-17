@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
 import { IUser } from "./type.d";
-import sequelize from "../db/database";
+import sequelize from "../database/database";
 
 class UserModel extends Model<IUser> {}
 UserModel.init(

@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
+import sequelize from "../database/database";
 import { IMessage } from "./type.d";
-import sequelize from "../db/database";
 
 class MessageModel extends Model<IMessage> {}
 MessageModel.init(

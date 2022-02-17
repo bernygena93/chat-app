@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
 import { IChannel } from "./type.d";
-import sequelize from "../db/database";
+import sequelize from "../database/database";
 
 class ChannelModel extends Model<IChannel> {}
 ChannelModel.init(

@@ -1,5 +1,5 @@
 export interface IMessage {
-  id: {
+  id?: {
     type: Number;
     primaryKey: Boolean;
     autoIncrement: Boolean;
@@ -17,7 +17,7 @@ export interface IMessage {
 }
 
 export interface IChannel {
-  id: {
+  id?: {
     type: Number;
     primaryKey: Boolean;
     autoIncrement: Boolean;
@@ -35,7 +35,7 @@ export interface IChannel {
 }
 
 export interface IUser {
-  id: {
+  id?: {
     type: Number;
     primaryKey: Boolean;
     autoIncrement: Boolean;
