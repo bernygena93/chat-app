@@ -5,9 +5,10 @@ import MessageModel from "../models/message";
 class MessageController {
   static async create(req: Request, res: Response): Promise<Response> {
     try {
+      const { message, date } = req.body;
       await MessageModel.create({
-        message: req.body.message,
-        date: req.body.date,
+        message,
+        date,
       });
       return res.status(201).json({ message: "created new message" });
     } catch (err) {

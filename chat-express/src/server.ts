@@ -4,7 +4,8 @@ import logger from "loglevel";
 import "dotenv/config";
 import bodyParser from "body-parser";
 import sequelize from "./database/database";
-import messageRouter from "./route/message";
+import messageRoutes from "./routes/message";
+import channelRoutes from "./routes/channel";
 
 const app: Application = express();
 const server: Server = http.createServer(app);
@@ -13,7 +14,8 @@ app.set("port", process.env.PORT || 8080);
 app.use(bodyParser.json());
 
 // routes
-app.use("/messages", messageRouter);
+app.use("/messages", messageRoutes);
+app.use("/channel", channelRoutes);
 
 server.listen(app.get("port"), async () => {
   try {
