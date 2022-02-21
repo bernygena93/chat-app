@@ -101,8 +101,14 @@
     width: 20%;
     box-shadow: none;
   }
-  .title {
+  .title,
+  .name {
     font-size: $font-size;
+  }
+  .description {
+    @include display-flex(center, flex-start);
+    font-size: $name-size-d;
+    height: 20%;
   }
   .user {
     font-size: $font-size-d;
@@ -112,10 +118,22 @@
   }
   .body {
     gap: 1rem;
+    margin-top: 0%;
+    height: 70vh;
+  }
+  .bodyMembers {
+    padding-top: 2vh;
+    height: 42vh;
   }
   .header {
     .icon {
       font-size: $icon-size-d;
     }
+  }
+  .nameContainer {
+    height: 7vh;
+  }
+  .search {
+    height: 10vh;
   }
 }

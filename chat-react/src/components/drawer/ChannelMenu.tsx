@@ -15,7 +15,7 @@ function ChannelMenu({ handlerSelected }: ChannelMenuProps) {
           className={styles.userIcon}
           onClick={() => handlerSelected()}
         />
-        <h2>All Channels</h2>
+        <h2 className={styles.title}>All Channels</h2>
       </div>
       <div className={styles.nameContainer}>
         <h3 className={styles.name}>{channels[0].name}</h3>
