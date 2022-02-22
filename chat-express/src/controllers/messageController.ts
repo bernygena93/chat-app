@@ -1,15 +1,17 @@
 import { Request, Response } from "express";
 import logger from "loglevel";
 import MessageModel from "../models/message";
+import socket from "../socket";
 
 class MessageController {
   static async create(req: Request, res: Response): Promise<Response> {
     try {
       const { message, date } = req.body;
-      await MessageModel.create({
+      const newMessage = await MessageModel.create({
         message,
         date,
       });
+      socket.emit("message", newMessage);
       return res.status(201).json({ message: "created new message" });
     } catch (err) {
       logger.error(err);
