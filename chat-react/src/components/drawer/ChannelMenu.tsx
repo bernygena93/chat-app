@@ -1,13 +1,16 @@
-import React, { Fragment } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import channels from "../../json/channels.json";
+import { useSelector } from "react-redux";
 import styles from "./drawer.module.scss";
 import Member from "../member/Member";
+import IMember from "../member/types.d";
+import { RootState } from "../../store";
 
 type ChannelMenuProps = {
   handlerSelected: Function;
 };
 function ChannelMenu({ handlerSelected }: ChannelMenuProps) {
+  const channels = useSelector((state: RootState) => state.channels.channels);
+
   return (
     <>
       <div className={styles.header}>
@@ -25,7 +28,7 @@ function ChannelMenu({ handlerSelected }: ChannelMenuProps) {
         <h3 className={styles.name}>Members</h3>
       </div>
       <div className={styles.bodyMembers}>
-        {channels[0].members.map((member) => (
+        {channels[0].members.map((member: IMember) => (
           <Member member={member} />
         ))}
       </div>
