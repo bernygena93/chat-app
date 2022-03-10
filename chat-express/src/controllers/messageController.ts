@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import logger from "../utils/logger";
 import MessageModel from "../models/message";
-import io from "../socket";
 
 class MessageController {
   static async create(req: Request, res: Response): Promise<Response> {
@@ -11,7 +10,6 @@ class MessageController {
         message,
         date,
       });
-      io.emit("message", message);
       return res.status(201).json({ message: "created new message" });
     } catch (err) {
       logger.error(err);
