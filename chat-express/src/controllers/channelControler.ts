@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import logger from "loglevel";
+import logger from "../utils/logger";
 import ChannelModel from "../models/channel";
 
 class ChannelController {
