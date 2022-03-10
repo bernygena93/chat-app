@@ -1,9 +1,11 @@
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
+import { useSelector } from "react-redux";
 import styles from "./drawer.module.scss";
 import Search from "../search/Search";
-import channels from "../../json/channels.json";
 import Channel from "../channel/Channel";
+import { RootState } from "../../store";
+import IChannel from "../channel/types.d";
 
 type MenuProps = {
   handlerSelected: Function;
@@ -12,6 +14,8 @@ type MenuProps = {
 };
 
 function Menu({ handlerSelected, setView, drawerToggle }: MenuProps) {
+  const channels = useSelector((state: RootState) => state.channels.channels);
+
   const handleViewModalandDrawer = () => {
     drawerToggle();
     setView(true);
@@ -29,10 +33,10 @@ function Menu({ handlerSelected, setView, drawerToggle }: MenuProps) {
         <Search />
       </div>
       <div className={styles.body}>
-        {channels.map((channel) => (
+        {channels.map((channel: IChannel) => (
           <Channel
             channel={channel}
-            key={channel.id}
+            key={channel.id.toString()}
             onclick={handlerSelected}
           />
         ))}
