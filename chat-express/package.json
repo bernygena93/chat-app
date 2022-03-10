@@ -11,10 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
+    "dayjs": "^1.10.7",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
-    "loglevel": "^1.8.0",
     "mysql2": "^2.3.3",
+    "pino": "^7.8.0",
+    "pino-pretty": "^7.5.1",
     "sequelize": "^6.15.1",
     "socket.io": "^4.4.1"
   },
