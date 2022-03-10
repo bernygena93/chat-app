@@ -10,11 +10,12 @@ export const addChannel = (
   members: Array<IMember>,
   // eslint-disable-next-line arrow-body-style
 ) => {
-  return async (dispatch: Dispatch) => {
+  return (dispatch: Dispatch) => {
     try {
       dispatch({
         type: ADD_CHANNEL,
         payload: {
+          id: Math.random(),
           name,
           description,
           members,
